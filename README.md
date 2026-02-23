@@ -23,3 +23,8 @@ Industrial-grade project focused on bioinformatics/data engineering hiring signa
 3. Implement minimal vertical slice in src/
 4. Add one integration test in tests/
 5. Add Dockerfile + CI workflow
+
+## MVP Progress
+- Added demographic parity gap metric for bias checks.
+- Added SHAP-style feature ranking helper.
+- Added tests for fairness and interpretability utilities.
