@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "04_clinical_risk_modeling_interpretability_bias"
+version = "0.1.0"
+description = "Hiring-focused industrial bioinformatics project"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
