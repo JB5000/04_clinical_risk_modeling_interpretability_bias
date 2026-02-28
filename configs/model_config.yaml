@@ -1,0 +1,65 @@
+# Model configuration
+model:
+  default_type: xgboost
+  version: v1.0.0
+  random_state: 42
+
+# Hyperparameters
+xgboost:
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  eval_metric: logloss
+
+random_forest:
+  n_estimators: 100
+  max_depth: 10
+  min_samples_split: 5
+
+logistic:
+  max_iter: 1000
+  penalty: l2
+  C: 1.0
+
+# Training
+training:
+  test_size: 0.2
+  cv_folds: 5
+  stratify: true
+
+# Fairness thresholds
+fairness:
+  demographic_parity: 0.05
+  equal_opportunity: 0.10
+  equalized_odds: 0.10
+  calibration_error: 0.02
+
+# Protected attributes
+protected_attributes:
+  - gender
+  - race
+  - age_group
+
+# Risk categories
+risk_thresholds:
+  low: 0.3
+  high: 0.7
+
+# Features
+features:
+  numerical:
+    - age
+    - bmi
+    - systolic_bp
+    - diastolic_bp
+    - glucose
+    - cholesterol
+  categorical:
+    - gender
+    - race
+    - smoking_status
+  boolean:
+    - diabetes
+    - hypertension
+    - heart_disease
+    - prior_stroke
