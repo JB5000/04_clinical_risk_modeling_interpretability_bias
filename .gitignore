@@ -1,25 +1,76 @@
 # Python
 __pycache__/
-*.pyc
-.venv/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Data artifacts
-*.parquet
-*.feather
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Models and data
+models/*.joblib
+models/*.pkl
 *.h5
-*.bam
-*.fastq.gz
-*.fq.gz
+*.pth
+data/
+*.csv
+!examples/*.csv
 
-# Env and secrets
+# MLflow
+mlruns/
+mlartifacts/
+
+# Logs
+*.log
+logs/
+
+# Evaluation results
+evaluation_results/
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.cover
+
+# Secrets
 .env
 *.key
 *.pem
-
-# Tooling
-.pytest_cache/
-.mypy_cache/
-.dvc/cache/
-.nextflow/
-work/
-results/
+credentials.json
